@@ -1,0 +1,27 @@
+{
+  "name": "simple-dsl",
+  "description": "Simple String &lt;key,value&gt; DSL.",
+  "homepage": "https://github.com/Kikobeats/simple-dsl",
+  "version": "0.0.0",
+  "main": "dist/simple-dsl.js",
+  "authors": [
+    {
+      "email": "josefrancisco.verdu@gmail.com",
+      "name": "Kiko Beats",
+      "url": "https://github.com/Kikobeats"
+    }
+  ],
+  "repository": "Kikobeats/simple-dsl",
+  "bugs": {
+    "url": "https://github.com/Kikobeats/simple-dsl/issues"
+  },
+  "keywords": [],
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,45 @@
+{
+  "name": "simple-dsl",
+  "description": "Simple String <key,value> DSL.",
+  "homepage": "https://github.com/Kikobeats/simple-dsl",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": {
+    "name": "Kiko Beats",
+    "email": "josefrancisco.verdu@gmail.com",
+    "url": "https://github.com/Kikobeats"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kikobeats/simple-dsl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kikobeats/simple-dsl/issues"
+  },
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "latest",
+    "coffee-script": "latest",
+    "coffeeify": "latest",
+    "git-dirty": "latest",
+    "gulp": "latest",
+    "gulp-header": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest",
+    "mocha": "latest",
+    "should": "latest",
+    "standard": "latest",
+    "vinyl-source-buffer": "latest"
+  },
+  "engines": {
+    "node": ">= 4"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "lint": "standard lib",
+    "pretest": "npm run lint",
+    "test": "mocha"
+  },
+  "license": "MIT"
+}
