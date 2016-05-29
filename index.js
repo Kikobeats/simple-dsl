@@ -8,7 +8,7 @@ function JSONify (input, index, lastIndex) {
   input = input.split(':')
   var key = input[0]
   var value = input[1]
-  var separator = index === lastIndex ? '' : ','
+  var separator = index !== lastIndex ? ',' : ''
   return stringify(key, value) + separator
 }
 
