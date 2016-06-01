@@ -7,7 +7,7 @@
 [![NPM Status](https://img.shields.io/npm/dm/simple-dsl.svg?style=flat-square)](https://www.npmjs.org/package/simple-dsl)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/Kikobeats)
 
-> Simple String <key,value> DSL. Inspired in [Github Search](https://github.com/search).
+> Simple String <key,value> DSL. Inspired in [Github](https://github.com/search) [Search](https://help.github.com/articles/searching-issues/).
 
 ## Install
 
