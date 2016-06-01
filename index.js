@@ -1,37 +1,61 @@
 'use strict'
 
-function stringify (key, value) {
-  return '"' + key + '":"' + value + '"'
+var REGEX = {
+  TRIM_QUOTES: /"/g
 }
 
-function JSONify (input, index, lastIndex) {
-  input = input.split(':')
-  var key = input[0]
-  var value = input[1]
-  var separator = index !== lastIndex ? ',' : ''
-  return stringify(key, value) + separator
+function isKeyValue (str) {
+  return str.indexOf(':') !== -1
 }
 
-function dsl (str) {
-  str = str.split(' ')
+function isText (str) {
+  return !isKeyValue(str)
+}
 
-  var open = '{'
-  var close = '}'
-  var result = ''
-  var size = str.length
-  var lastIndex = size - 1
+function hasQuote (str) {
+  return str.toString().indexOf('"') !== -1
+}
+
+function addKeyValue (json, item) {
+  item = item.split(':')
+  json[item[0]] = item[1]
+}
+
+var buffer = ''
+var bufferCalls = 0
+
+function addText (json, item) {
+  if (!hasQuote(item)) {
+    json.text += item
+    return
+  }
+
+  var separator = buffer ? buffer + ' ' : ''
+  buffer = separator + item
+
+  if (++bufferCalls === 2) {
+    addKeyValue(json, buffer.replace(REGEX.TRIM_QUOTES, ''))
+    buffer = null
+    bufferCalls = 0
+  }
+}
+
+function dsl (input) {
+  input = input.split(' ')
+
   var index = -1
 
-  while (str[++index] && str[index].indexOf(':') !== -1) {
-    result += JSONify(str[index], index, lastIndex)
+  var json = {
+    text: ''
   }
 
-  if (str[index]) {
-    var text = str.slice(index, size).join(' ')
-    result += stringify('text', text)
+  while (input[++index]) {
+    var item = input[index]
+    if (isKeyValue(item) && !hasQuote(item)) addKeyValue(json, item)
+    else addText(json, item)
   }
 
-  return JSON.parse(open + result + close)
+  return json
 }
 
 module.exports = dsl
