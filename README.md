@@ -1,10 +1,4 @@
-# simple-dsl
-
-<p align="center">
-  <br>
-  <img src="https://i.imgur.com/Mh13XWB.gif" alt="simple-dsl">
-  <br>
-</p>
+# Simple DSL
 
 ![Last version](https://img.shields.io/github/tag/Kikobeats/simple-dsl.svg?style=flat-square)
 [![Build Status](https://img.shields.io/travis/Kikobeats/simple-dsl/master.svg?style=flat-square)](https://travis-ci.org/Kikobeats/simple-dsl)
@@ -13,9 +7,7 @@
 [![NPM Status](https://img.shields.io/npm/dm/simple-dsl.svg?style=flat-square)](https://www.npmjs.org/package/simple-dsl)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/Kikobeats)
 
-**NOTE:** more badges availables in [shields.io](https://shields.io/)
-
-> Simple String <key,value> DSL.
+> Simple String <key,value> DSL. Inspired in [Github Search](https://github.com/search).
 
 ## Install
 
@@ -34,34 +26,18 @@ and later link in your HTML:
 ```html
 <script src="bower_components/simple-dsl/dist/simple-dsl.js"></script>
 ```
+
 ## Usage
 
 ```js
-const simpleDsl = require('simple-dsl')
-
-simpleDsl('do something')
-//=> return something
+const dsl = require('simple-dsl')
+dsl('is:issue status:closed bug fixed')
+// {
+//   is: 'issue',
+//   status: 'closed',
+//   text: 'bug fixed'
+// }
 ```
-
-## API
-
-### simpleDsl(input, [options])
-
-#### input
-
-*Required*
-Type: `string`
-
-Lorem ipsum.
-
-#### options
-
-##### foo
-
-Type: `boolean`
-Default: `false`
-
-Lorem ipsum.
 
 ## License
 
