@@ -1,6 +1,6 @@
 {
   "name": "simple-dsl",
-  "description": "Simple String <key,value> DSL.",
+  "description": "Simple DSL based on <key,value> designed to work together fulltext search engines",
   "homepage": "https://github.com/Kikobeats/simple-dsl",
   "version": "0.0.0",
   "main": "index.js",
@@ -16,10 +16,13 @@
   "bugs": {
     "url": "https://github.com/Kikobeats/simple-dsl/issues"
   },
-  "keywords": [],
-  "dependencies": {
-    "escape-json-node": "~1.0.7"
-  },
+  "keywords": [
+    "dsl",
+    "fulltext",
+    "parser",
+    "search",
+    "simple"
+  ],
   "devDependencies": {
     "browserify": "latest",
     "coffee-script": "latest",
@@ -35,8 +38,12 @@
     "vinyl-source-buffer": "latest"
   },
   "engines": {
-    "node": ">= 4"
+    "node": ">= 0.10"
   },
+  "files": [
+    "dist/simple-dsl.js",
+    "index.js"
+  ],
   "scripts": {
     "clean": "rm -rf node_modules",
     "lint": "standard lib index.js",

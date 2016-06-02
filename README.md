@@ -7,7 +7,7 @@
 [![NPM Status](https://img.shields.io/npm/dm/simple-dsl.svg?style=flat-square)](https://www.npmjs.org/package/simple-dsl)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/Kikobeats)
 
-> Simple DSL for fulltext search.
+> Simple DSL based on <key,value> designed to work together fulltext search engines.
 
 ## Why
 
