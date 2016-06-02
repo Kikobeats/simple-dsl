@@ -2,7 +2,7 @@
   "name": "simple-dsl",
   "description": "Simple String &lt;key,value&gt; DSL.",
   "homepage": "https://github.com/Kikobeats/simple-dsl",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "dist/simple-dsl.js",
   "authors": [
     {
@@ -11,7 +11,10 @@
       "url": "https://github.com/Kikobeats"
     }
   ],
-  "repository": "Kikobeats/simple-dsl",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kikobeats/simple-dsl.git"
+  },
   "bugs": {
     "url": "https://github.com/Kikobeats/simple-dsl/issues"
   },

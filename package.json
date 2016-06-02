@@ -2,7 +2,7 @@
   "name": "simple-dsl",
   "description": "Simple DSL based on <key,value> designed to work together fulltext search engines",
   "homepage": "https://github.com/Kikobeats/simple-dsl",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "author": {
     "name": "Kiko Beats",
