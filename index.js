@@ -8,10 +8,6 @@ function isKeyValue (str) {
   return str.indexOf(':') !== -1
 }
 
-function isText (str) {
-  return !isKeyValue(str)
-}
-
 function hasQuote (str) {
   return str.toString().indexOf('"') !== -1
 }
