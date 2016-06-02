@@ -18,7 +18,13 @@ function hasQuote (str) {
 
 function addKeyValue (json, item) {
   item = item.split(':')
-  json[item[0]] = item[1]
+  var key = item[0]
+  var value = item[1]
+
+  if (json[key]) {
+    if (!Array.isArray(json[key])) json[key] = [json[key], value]
+    else json[key].push(value)
+  } else json[key] = value
 }
 
 var buffer = ''
@@ -26,7 +32,8 @@ var bufferCalls = 0
 
 function addText (json, item) {
   if (!hasQuote(item)) {
-    json.text += item
+    if (json.text) json.text += item
+    else json.text = item
     return
   }
 
@@ -45,9 +52,7 @@ function dsl (input) {
 
   var index = -1
 
-  var json = {
-    text: ''
-  }
+  var json = {}
 
   while (input[++index]) {
     var item = input[index]

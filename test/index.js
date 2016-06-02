@@ -41,6 +41,26 @@ describe('simple-dsl', function () {
     })
   })
 
+  describe('multiple values in different fields', function () {
+    it('user:kiko user:beats', function () {
+      dsl('user:kiko user:beats').should.be.eql({
+        user: ['kiko', 'beats']
+      })
+    })
+
+    it('user:"kiko beats" user:"javier baena"', function () {
+      dsl('user:"kiko beats" user:"javier baena"').should.be.eql({
+        user: ['kiko beats', 'javier baena']
+      })
+    })
+
+    it('user:"kiko beats" user:"javier baena" user:"alfredo artiles"', function () {
+      dsl('user:"kiko beats" user:"javier baena" user:"alfredo artiles"').should.be.eql({
+        user: ['kiko beats', 'javier baena', 'alfredo artiles']
+      })
+    })
+  })
+
   // it('simple key value', function () {
   //   dsl('kiko:beats').should.be.eql({kiko: 'beats'})
   // })
