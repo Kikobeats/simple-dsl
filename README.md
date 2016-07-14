@@ -79,6 +79,10 @@ dsl('user:"kiko beats" user:"javier baena" status:closed bug fixed')
 // }
 ```
 
+## Related
+
+- [Ghost Query Language (GQL)](https://github.com/TryGhost/GQL) – Filter query language for working with Ghost's API.
+
 ## License
 
 MIT © [Kiko Beats](http://kikobeats.com)
