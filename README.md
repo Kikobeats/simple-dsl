@@ -1,5 +1,7 @@
 # Simple DSL
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Kikobeats/simple-dsl.svg)](https://greenkeeper.io/)
+
 ![Last version](https://img.shields.io/github/tag/Kikobeats/simple-dsl.svg?style=flat-square)
 [![Build Status](https://img.shields.io/travis/Kikobeats/simple-dsl/master.svg?style=flat-square)](https://travis-ci.org/Kikobeats/simple-dsl)
 [![Dependency status](https://img.shields.io/david/Kikobeats/simple-dsl.svg?style=flat-square)](https://david-dm.org/Kikobeats/simple-dsl)
