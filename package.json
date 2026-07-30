@@ -1,12 +1,12 @@
 {
   "name": "simple-dsl",
-  "description": "Simple DSL based on <key,value> designed to work together fulltext search engines",
+  "description": "Tiny key=value DSL parser designed to pair with full-text search engines and query builders.",
   "homepage": "https://github.com/Kikobeats/simple-dsl",
   "version": "1.0.0",
   "main": "index.js",
   "author": {
-    "name": "Kiko Beats",
     "email": "josefrancisco.verdu@gmail.com",
+    "name": "Kiko Beats",
     "url": "https://github.com/Kikobeats"
   },
   "repository": {
@@ -18,10 +18,15 @@
   },
   "keywords": [
     "dsl",
+    "filter",
     "fulltext",
+    "key-value",
+    "lexer",
+    "lucene",
     "parser",
+    "query",
     "search",
-    "simple"
+    "syntax"
   ],
   "devDependencies": {
     "browserify": "latest",
